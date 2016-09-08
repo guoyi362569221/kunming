@@ -17,11 +17,17 @@ define('router',[
 
             .state('login',{
                     url:'/login',
-                    templateUrl: 'pages/login.html',
-                    //  controller:function ($scope,$state) {
-                    //     $scope.name='jimmy';
-                    // }
-                    // controller: 'loginCtrl'
+                    views:{
+                        '':{
+                            templateUrl:'pages/index.html'
+                        },
+                        'topbannerView@login':{
+                            templateUrl:'pages/topbanner.html'
+                        },
+                        'mainView@login':{
+                            templateUrl:'pages/login.html'
+                        },              
+                    }
             })
             .state('index',{
                 url:'/index',

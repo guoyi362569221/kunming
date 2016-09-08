@@ -1,0 +1,44 @@
+.bg-sprite{
+	background: url(../imgs/sprite.png) 0 0 no-repeat;
+}
+.banner-wrapper{
+	position: relative;
+	height: 65px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	.logo{
+		padding-left: 120px;
+		.size(240px,100%);
+		position: relative;
+		.logo-img{
+			position: absolute;
+			.size(33px,25px);
+			top:20px;
+			.bg-sprite;
+			background-position: -206px -83px;
+		}
+		.logo-word{
+			margin-left: 45px;
+			div{
+				&:first-child{
+					padding-top: 13px;
+					color:@blueColor;
+					font-size: 16px;
+				}
+				&:last-child{
+					color:@grayColor;
+					font-size: 12px;
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+	.register{
+		color:@blueColor;
+		position: absolute;
+		right:110px;
+		top: 24px;
+		cursor: pointer;
+		font-size:14px; 
+	}
+}

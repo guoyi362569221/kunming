@@ -1,8 +1,11 @@
 
-define(['app'],function (app) {
+define([
+	'app',
+	'errortip'
+	],function (app) {
 	
 	app.controller('loginCtrl',['$scope',function($scope){
-		$scope.name='jimmy';
+		$scope.mytips='手机号注意了';
 	}]);
 
 });

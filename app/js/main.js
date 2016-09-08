@@ -12,7 +12,8 @@ requirejs.config({
         app:'app',
         router:'router',
 
-        loginCtrl:'controllers/loginCtrl'
+        loginCtrl:'controllers/loginCtrl',
+        errortip:'directives/errortip'
     },
     shim: {
         angular: {
