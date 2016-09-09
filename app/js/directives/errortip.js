@@ -11,7 +11,7 @@ define(['app'],function (app) {
 				tipwords:'=mytips',
 			},
 			restrict:'A',
-			template:'<div class="login-form"><div class="common-error-tips"><div>{{tipwords}}<div></div></div>',
+			template:'<div class="common-error-tips"><div>{{tipwords}}<div></div>',
 			replace:true
 		}
 	});

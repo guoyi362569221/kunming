@@ -1,4 +1,4 @@
-@blueColor:RGB(33, 65, 119);
+@blueColor:RGB(54, 103, 166);
 
 @grayColor:#a09e9e;
 
@@ -43,12 +43,13 @@ textarea {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-input:focus,
+input[type=text]:focus,
+input[type=password]:focus,
 textarea:focus {
   outline: 0;
-  box-shadow: 0 0 5px #ccc;
-  border-color: #fff;
-  background: #fff;
+  // box-shadow: 0 0 5px #ccc;
+  border:1px solid RGB(54, 103, 166);
+  background: red;
 }
 .font-icon {
   display: inline-block;
@@ -81,8 +82,8 @@ body{
       color: #fff;
       font-size: 14px;
       text-align: center;
-      .size(215px,35px);
-      line-height: 35px;
+      .size(215px,32px);
+      line-height: 32px;
       background-color: @color;
       .radius(2px);
       position: relative;
@@ -93,7 +94,7 @@ body{
         height: 0;
         position: absolute;
         left: -14px;
-        top: 6px;
+        top: 4px;
         border-top:12px solid transparent;
         border-bottom:12px solid transparent;
         border-right: 22px solid @color;
