@@ -44,8 +44,20 @@ ul {
 ul li {
   list-style: none;
 }
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   margin: 0;
+}
+body .root-view {
+  height: 100%;
+}
+body .main-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 body .common-error-tips > div {
   margin-left: 30px;
@@ -113,23 +125,29 @@ body .common-error-tips > div::before {
   position: absolute;
   right: 110px;
   top: 24px;
+  z-index: 21;
   cursor: pointer;
   font-size: 14px;
 }
-.login-box {
+.login-wrapper {
+  min-height: 100%;
+  position: relative;
+  margin-top: -65px;
+}
+.login-wrapper .login-box {
   width: 320px;
   height: 480px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-left: -160px;
-  margin-top: -220px;
+  margin-top: -230px;
 }
-.login-box .login-title {
+.login-wrapper .login-box .login-title {
   text-align: center;
   margin: 20px 0;
 }
-.login-box .login-title .company-name i {
+.login-wrapper .login-box .login-title .company-name i {
   display: inline-block;
   vertical-align: top;
   width: 20px;
@@ -137,7 +155,7 @@ body .common-error-tips > div::before {
   background: url(../imgs/sprite.png) 0 0 no-repeat;
   background-position: -177px -11px;
 }
-.login-box .login-title .company-name span {
+.login-wrapper .login-box .login-title .company-name span {
   margin-left: 8px;
   display: inline-block;
   vertical-align: top;
@@ -146,24 +164,24 @@ body .common-error-tips > div::before {
   margin-top: 4px;
   letter-spacing: 3px;
 }
-.login-box .login-title .systme-name {
+.login-wrapper .login-box .login-title .systme-name {
   margin: 30px 0 40px 0;
   font-size: 20px;
 }
-.login-box .login-title .systme-name span {
+.login-wrapper .login-box .login-title .systme-name span {
   color: #555555;
 }
-.login-box .login-title .systme-name span:nth-of-type(2) {
+.login-wrapper .login-box .login-title .systme-name span:nth-of-type(2) {
   color: #3667a6;
 }
-.login-box .login-form {
+.login-wrapper .login-box .login-form {
   margin-top: 20px;
 }
-.login-box .login-form .form-group {
+.login-wrapper .login-box .login-form .form-group {
   margin: 35px 0;
   position: relative;
 }
-.login-box .login-form .form-group.form-input input {
+.login-wrapper .login-box .login-form .form-group.form-input input {
   width: 314px;
   height: 28px;
   border: 1px solid #d9d9d9;
@@ -172,10 +190,10 @@ body .common-error-tips > div::before {
   border-radius: 2px;
   background-clip: padding-box;
 }
-.login-box .login-form .form-group.form-input input:focus {
+.login-wrapper .login-box .login-form .form-group.form-input input:focus {
   border-color: #3667a6;
 }
-.login-box .login-form .form-group.form-btn input {
+.login-wrapper .login-box .login-form .form-group.form-btn input {
   width: 320px;
   background-color: #3667a6;
   border: none;
@@ -188,24 +206,51 @@ body .common-error-tips > div::before {
   line-height: 30px;
   height: 38px;
 }
-.login-box .login-form .form-group.form-btn input:hover {
+.login-wrapper .login-box .login-form .form-group.form-btn input:hover {
   background-color: #19539e;
 }
-.login-box .login-form .form-group.form-forget {
+.login-wrapper .login-box .login-form .form-group.form-forget {
   width: 320px;
   text-align: right;
   font-size: 12px;
   color: #777777;
 }
-.login-box .login-form .form-group.form-forget span {
+.login-wrapper .login-box .login-form .form-group.form-forget span {
   opacity: 0.8;
   cursor: pointer;
 }
-.login-box .login-form .form-group.form-forget span:hover {
+.login-wrapper .login-box .login-form .form-group.form-forget span:hover {
   opacity: 1;
 }
-.login-box .login-form .form-group .common-error-tips {
+.login-wrapper .login-box .login-form .form-group .common-error-tips {
   position: absolute;
   left: 330px;
   top: 0;
+}
+.login-wrapper .power-bg {
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  width: 360px;
+  height: 512px;
+  z-index: 10;
+}
+.login-wrapper .power-bg img {
+  max-width: 100%;
+}
+@media screen and (max-width: 1066px) {
+  .power-bg {
+    display: none;
+  }
+}
+.footer-wrapper {
+  background-color: #fafafa;
+  border-top: 1px solid #d9d9d9;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 50px;
 }

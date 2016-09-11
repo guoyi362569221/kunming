@@ -12,9 +12,13 @@ requirejs.config({
         app:'app',
         router:'router',
 
+        errortip:'directives/errortip',
+        footer:'directives/footer',
+
+
         loginCtrl:'controllers/loginctrl',
         loginService:'services/loginservice',
-        errortip:'directives/errortip'
+
     },
     shim: {
         angular: {

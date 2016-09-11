@@ -4,6 +4,7 @@
 define([
     'app',
     'errortip',
+    'footer',
     'loginService'
 ], function(app) {
 

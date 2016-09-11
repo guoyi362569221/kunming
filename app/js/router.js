@@ -29,6 +29,20 @@ define('router',[
                         },              
                     }
             })
+            .state('register',{
+                url:'/register',
+                views:{
+                    '':{
+                        templateUrl:'pages/index.html'
+                    },
+                    'topbannerView@register':{
+                        templateUrl:'pages/topbanner.html'
+                    },
+                    'mainView@register':{
+                        templateUrl:'pages/register.html'
+                    },
+                }
+            })
             .state('index',{
                 url:'/index',
                 views:{
