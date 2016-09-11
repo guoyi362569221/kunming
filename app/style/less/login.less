@@ -1,7 +1,5 @@
 .login-wrapper {
-    min-height: 100%;
-    position: relative;
-    margin-top: -65px;
+
     .login-box {
         @w: 320px;
         .size(@w, 480px);
@@ -50,31 +48,12 @@
                 position: relative;
                 &.form-input {
                     input {
-                        .size(@w - 6px, @inputH);
-                        border: 1px solid RGB(217, 217, 217);
-                        background-color: RGB(246, 246, 246);
-                        text-indent: 8px;
-                        .radius(2px);
-                        &:focus {
-                            border-color: @blueColor;
-                        }
+                        width:@w - 6px;
                     }
                 }
                 &.form-btn {
                     input {
                         width: @w;
-                        background-color: @blueColor;
-                        border: none;
-                        color: #fff;
-                        .radius(2px);
-                        outline: none;
-                        cursor: pointer;
-                        font-size: 14px;
-                        line-height: @inputH+2;
-                        height: 38px;
-                        &:hover {
-                            background-color: #19539e;
-                        }
                     }
                 }
                 &.form-forget {
@@ -91,9 +70,9 @@
                     }
                 }
                 .common-error-tips {
-                    position: absolute;
-                    left: @w+10px;
-                    top: 0;
+                    //position: absolute;
+                    //left: @w+10px;
+                    //top: 0;
                 }
             }
         }

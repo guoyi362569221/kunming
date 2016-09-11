@@ -12,7 +12,7 @@ define(['app'],function (app) {
 				status:'=mystatus',
 			},
 			restrict:'A',
-			template:'<div class="common-error-tips" ng-show="status"><div>{{tipwords}}<div></div>',
+			template:'<div class="common-error-tips" ng-hide="status"><div>{{tipwords}}<div></div>',
 			replace:true
 		}
 	});

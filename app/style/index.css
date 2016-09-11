@@ -27,7 +27,6 @@ input[type=password]:focus,
 textarea:focus {
   outline: 0;
   border: 1px solid #3667a6;
-  background: red;
 }
 .font-icon {
   display: inline-block;
@@ -59,6 +58,16 @@ body .main-view {
   width: 100%;
   height: 100%;
 }
+body .main-view .item-wrapper {
+  min-height: 100%;
+  position: relative;
+  margin-top: -65px;
+}
+body .common-error-tips {
+  position: absolute;
+  right: -245px;
+  top: 0;
+}
 body .common-error-tips > div {
   margin-left: 30px;
   color: #fff;
@@ -83,6 +92,32 @@ body .common-error-tips > div::before {
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
   border-right: 22px solid #191a19;
+}
+body .normal-input {
+  height: 28px;
+  border: 1px solid #d9d9d9;
+  background-color: #f6f6f6;
+  text-indent: 8px;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+body .normal-input:focus {
+  border-color: #3667a6;
+}
+body .normal-btn {
+  background-color: #3667a6;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  background-clip: padding-box;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 30px;
+  height: 38px;
+}
+body .normal-btn:hover {
+  background-color: #19539e;
 }
 .bg-sprite {
   background: url(../imgs/sprite.png) 0 0 no-repeat;
@@ -128,11 +163,6 @@ body .common-error-tips > div::before {
   z-index: 21;
   cursor: pointer;
   font-size: 14px;
-}
-.login-wrapper {
-  min-height: 100%;
-  position: relative;
-  margin-top: -65px;
 }
 .login-wrapper .login-box {
   width: 320px;
@@ -183,31 +213,9 @@ body .common-error-tips > div::before {
 }
 .login-wrapper .login-box .login-form .form-group.form-input input {
   width: 314px;
-  height: 28px;
-  border: 1px solid #d9d9d9;
-  background-color: #f6f6f6;
-  text-indent: 8px;
-  border-radius: 2px;
-  background-clip: padding-box;
-}
-.login-wrapper .login-box .login-form .form-group.form-input input:focus {
-  border-color: #3667a6;
 }
 .login-wrapper .login-box .login-form .form-group.form-btn input {
   width: 320px;
-  background-color: #3667a6;
-  border: none;
-  color: #fff;
-  border-radius: 2px;
-  background-clip: padding-box;
-  outline: none;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 30px;
-  height: 38px;
-}
-.login-wrapper .login-box .login-form .form-group.form-btn input:hover {
-  background-color: #19539e;
 }
 .login-wrapper .login-box .login-form .form-group.form-forget {
   width: 320px;
@@ -221,11 +229,6 @@ body .common-error-tips > div::before {
 }
 .login-wrapper .login-box .login-form .form-group.form-forget span:hover {
   opacity: 1;
-}
-.login-wrapper .login-box .login-form .form-group .common-error-tips {
-  position: absolute;
-  left: 330px;
-  top: 0;
 }
 .login-wrapper .power-bg {
   position: absolute;
@@ -253,4 +256,112 @@ body .common-error-tips > div::before {
   left: 0;
   right: 0;
   line-height: 50px;
+}
+.register-box {
+  padding-top: 120px;
+  width: 80%;
+  margin: 0 auto;
+}
+.register-box .register-header {
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 5px;
+}
+.register-box .register-header > div {
+  display: inline-block;
+}
+.register-box .register-header > div span {
+  font-size: 14px;
+  color: #a09e9e;
+}
+.register-box .register-header > div:first-child {
+  width: 49%;
+}
+.register-box .register-header > div:first-child i {
+  display: inline-block;
+  width: 19px;
+  height: 16px;
+  background: url(../imgs/sprite.png) 0 0 no-repeat;
+  background-position: -273px -93px;
+  vertical-align: -3px;
+}
+.register-box .register-header > div:first-child span {
+  margin-left: 5px;
+}
+.register-box .register-header > div:last-child {
+  width: 50%;
+  text-align: right;
+}
+.register-box .register-header > div:last-child span {
+  cursor: pointer;
+}
+.register-box .register-header > div:last-child span:hover {
+  color: #6f6b6b;
+}
+.register-box .register-tips {
+  width: 490px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  border-bottom: 1px solid #dbdbdb;
+}
+.register-box .register-tips .left {
+  position: absolute;
+  width: 100px;
+  height: auto;
+}
+.register-box .register-tips .left i {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../imgs/sprite.png) 0 0 no-repeat;
+  background-position: -220px -15px;
+  vertical-align: -4px;
+}
+.register-box .register-tips .left span {
+  margin-left: 5px;
+  color: #3667a6;
+  font-size: 13px;
+}
+.register-box .register-tips .right {
+  margin-left: 100px;
+  padding-left: 20px;
+}
+.register-box .register-tips .right p {
+  color: #a09e9e;
+  line-height: 27px;
+  font-size: 13px;
+}
+.register-box .register-tips .right p span {
+  margin-right: 6px;
+  color: #212121;
+}
+.register-box .register-form {
+  width: 490px;
+  margin: 30px auto 0 auto;
+}
+.register-box .register-form > div {
+  width: 390px;
+}
+.register-box .register-form > div .form-group {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 35px 0;
+}
+.register-box .register-form > div .form-group .left-filed {
+  position: absolute;
+  width: 52px;
+  height: 100%;
+  text-align: right;
+}
+.register-box .register-form > div .form-group .left-filed label {
+  color: #a09e9e;
+  font-size: 13px;
+  vertical-align: -8px;
+}
+.register-box .register-form > div .form-group .right-input {
+  margin-left: 70px;
+  padding-left: 50px;
+}
+.register-box .register-form > div .form-group .right-input input {
+  width: 260px;
 }
