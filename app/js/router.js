@@ -2,7 +2,7 @@ define('router',[
     'app',
     'ui-router',
     'loginCtrl',
-
+    'registerCtrl'
     ],function (app) {
 
 

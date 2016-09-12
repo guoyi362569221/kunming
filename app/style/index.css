@@ -57,11 +57,13 @@ body .main-view {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -65px;
 }
 body .main-view .item-wrapper {
-  min-height: 100%;
   position: relative;
-  margin-top: -65px;
+  flex: 1;
 }
 body .common-error-tips {
   position: absolute;
@@ -251,10 +253,6 @@ body .normal-btn:hover {
   border-top: 1px solid #d9d9d9;
   height: 50px;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   line-height: 50px;
 }
 .register-box {
@@ -307,6 +305,7 @@ body .normal-btn:hover {
   position: absolute;
   width: 100px;
   height: auto;
+  padding-top: 3px;
 }
 .register-box .register-tips .left i {
   display: inline-block;
@@ -329,6 +328,7 @@ body .normal-btn:hover {
   color: #a09e9e;
   line-height: 27px;
   font-size: 13px;
+  margin: 10px 0;
 }
 .register-box .register-tips .right p span {
   margin-right: 6px;
@@ -361,7 +361,32 @@ body .normal-btn:hover {
 .register-box .register-form > div .form-group .right-input {
   margin-left: 70px;
   padding-left: 50px;
+  position: relative;
 }
 .register-box .register-form > div .form-group .right-input input {
   width: 260px;
+}
+.register-box .register-form > div .form-group .right-input form {
+  width: 110px;
+  height: 30px;
+  opacity: 0;
+}
+.register-box .register-form > div .form-group .right-input .select-box {
+  position: absolute;
+  top: 0;
+  left: 52px;
+  width: 110px;
+  height: 30px;
+}
+.register-box .register-form > div .form-group .right-input .select-box i {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  background: url(../imgs/sprite.png) 0 0 no-repeat;
+  background-position: -280px, -10px;
+}
+.register-box .register-form > div .form-group .right-input .select-box span {
+  color: #a09e9e;
+  font-size: 13px;
+  margin-left: 20px;
 }

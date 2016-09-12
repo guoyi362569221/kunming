@@ -17,7 +17,10 @@ requirejs.config({
 
 
         loginCtrl:'controllers/loginctrl',
+        registerCtrl:'controllers/registerctrl',
+
         loginService:'services/loginservice',
+        registerService:'services/registerservice',
 
     },
     shim: {

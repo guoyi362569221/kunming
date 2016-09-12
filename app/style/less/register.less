@@ -45,6 +45,7 @@
     .left{
       position: absolute;
       .size(100px,auto);
+      padding-top: 3px;
       i{
         display: inline-block;
         .size(19px;19px);
@@ -65,6 +66,7 @@
         color: @grayColor;
         line-height: 27px;
         font-size: 13px;
+        margin: 10px 0;
         span{
           margin-right: 6px;
           color: #212121;
@@ -94,8 +96,31 @@
         .right-input {
           margin-left: 70px;
           padding-left: 50px;
+          position: relative;
           input {
             width: 260px;
+          }
+
+          form{
+            .size(110px,30px);
+            opacity: 0;
+            }
+          .select-box{
+            position: absolute;
+            top:0;
+            left:52px;
+            .size(110px,30px);
+            i{
+              display: inline-block;
+              .size(30px,20px);
+              .bg-sprite;
+              background-position: -280px,-10px;
+            }
+            span{
+              color: @grayColor;
+              font-size: 13px;
+              margin-left: 20px;
+            }
           }
         }
       }

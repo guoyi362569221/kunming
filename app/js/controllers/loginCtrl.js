@@ -14,7 +14,6 @@ define([
         $scope.mystatus = true;
         $scope.mystatus1 = true;
 
-
         $scope.focus = function(index) {
             if (index == 0) {
                 $scope.mystatus = true;
@@ -24,15 +23,6 @@ define([
             }
         };
 
-
-        //$scope.blur = function(index) {
-        //    if (index == 0) {
-        //        ;
-        //    }
-        //    else{
-        //
-        //    }
-        //};
 
         $scope.login=function(){
             var result=service.validatorForm(0,$scope.mobile);
