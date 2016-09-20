@@ -1,0 +1,33 @@
+.desktop{
+  position: relative;
+  height: 100%;
+  margin: 0 120px;
+  .desktop-menu{
+    position:absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 180px;
+    border-right: 1px solid #ccc;
+    ul{
+      li{
+        .size(auto,35px);
+        margin-bottom: 10px;
+        line-height: 35px;
+        color: @grayColor;
+        font-size: 13px;
+        a{
+          display:inline-block;
+          width: 100%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  .desktop-main{
+    margin-left: 180px;
+    height: 100%;
+    overflow: auto;
+    padding-left: 45px;
+  }
+}

@@ -1,0 +1,32 @@
+.my-desktop{
+  ul{
+    li{
+      .size(110px,150px);
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      &:hover{
+        background-color: #E1E9EF;
+      }
+      .top-icon{
+        .size(49px,68px);
+        margin: 0 auto;
+        &.pass{
+          background: url(../../app/imgs/deskicon.png) 0 0 no-repeat;
+        }
+        &.unPass{
+          background: url(../../app/imgs/deskicon1.png) 0 0 no-repeat;
+        }
+      }
+      p{
+        font-size: 12px;
+        color: @grayColor;
+        line-height: 24px;
+       }
+    }
+  }
+}

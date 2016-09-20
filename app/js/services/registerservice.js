@@ -9,24 +9,32 @@ define(['app'],function (app) {
                 flag:true,
                 tips:''
             };
-            //用户名
-            if (index == 0) {
-                if(!val){
-                    result.tips='请输入手机号';
-                    result.flag=false;
-                }else {
-                    val = val.trim();
+            switch(index){
+                case 0:
+                    var reg=/^[\u4e00-\u9fa5]{2,5}$/;
+                    if (!reg.test(val)) {
+                        result.tips='请正确输入姓名';
+                        result.flag=false;
+                    }
+                    break;
+                case 1:
                     var reg = /^1\d{10}$/;
                     if (!reg.test(val)) {
                         result.tips='请正确输入手机号';
                         result.flag=false;
                     }
-                }
-            }else{
-                if(!val){
-                    result.flag=false;
-                    result.tips='请输入密码';
-                }
+                    break;
+                case 2:
+                    if(!val){
+                        result.flag=false;
+                        result.tips='请输入密码';
+                    }
+                    break;
+                case 3:
+                    //if()
+                    break;
+                default:
+                    break;
             }
             return result;
         };

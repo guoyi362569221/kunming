@@ -30,11 +30,14 @@ define([
             if(!result.flag){
                 $scope.mystatus=false;
                 $scope.mytips=result.tips;
+                return;
             }
             if(!result1.flag){
                 $scope.mystatus1=false;
                 $scope.mytips1=result1.tips;
+                return;
             }
+            window.location.href='index.html#/desktop';
         };
 
     	}

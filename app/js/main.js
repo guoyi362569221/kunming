@@ -18,6 +18,8 @@ requirejs.config({
 
         loginCtrl:'controllers/loginctrl',
         registerCtrl:'controllers/registerctrl',
+        myDesktopCtrl:'controllers/mydesktopctrl',
+        docDetailCtrl:'controllers/docdetailctrl',
 
         loginService:'services/loginservice',
         registerService:'services/registerservice',

@@ -1,0 +1,8 @@
+<div class="my-desktop" ng-controller="myDesktopCtrl">
+    <ul>
+        <li class="item" ng-repeat="item in docArr" data-id="item.id" ng-click="showDocDeailInfo(item.id)">
+            <div class="top-icon" ng-class="{true:'pass',false:'unPass'}[item.status]"></div>
+            <p>{{item.name}}</p>
+        </li>
+    </ul>
+</div>

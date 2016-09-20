@@ -1,5 +1,4 @@
 .register-box{
-  padding-top: 120px;
   width: 80%;
   margin: 0 auto;
   .register-header{
@@ -7,9 +6,12 @@
     padding-bottom: 5px;
     >div{
       display: inline-block;
-      span{
+      a{
         font-size: 14px;
         color:@grayColor;
+        &:hover{
+          text-decoration: underline;
+        }
       }
       &:first-child{
         width: 49%;
@@ -104,22 +106,35 @@
           form{
             .size(110px,30px);
             opacity: 0;
+            input{
+                cursor: pointer;
+                display: block;
+                .size(100%,100%);
+              }
             }
           .select-box{
             position: absolute;
             top:0;
             left:52px;
             .size(110px,30px);
+            z-index: -1;
+            background-color: RGB(220, 220, 220);
+            border: 1px solid RGB(191, 191, 191);
+            .radius(3px);
+            line-height: 30px;
+
             i{
               display: inline-block;
-              .size(30px,20px);
+              .size(19px,14px);
               .bg-sprite;
-              background-position: -280px,-10px;
+              background-position: -273px -13px;
+              vertical-align: -3px;
+              margin-left: 10px;
             }
             span{
-              color: @grayColor;
+              color: #737272;  //#737272
               font-size: 13px;
-              margin-left: 20px;
+              margin-left: 15px;
             }
           }
         }

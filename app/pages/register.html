@@ -6,7 +6,7 @@
                 <span>请填写注册信息</span>
             </div>
             <div class="back-to-preview">
-                <span>返回</span>
+                <a href="javascript:history.back(-1)">返回</a>
             </div>
         </div>
         <div class="register-tips">
@@ -25,26 +25,26 @@
                 <div class="form-group form-input">
                     <div class="left-filed"><label>真实姓名</label></div>
                     <div class="right-input">
-                    <input type="text" name="user-name" class="normal-input" ng-model="realname" ng-focus="focus(0)"></div>
-                    <div errortip mytips="mytips1" mystatus="mystatus"></div>
+                    <input type="text" name="user-name" class="normal-input" ng-model="name" ng-focus="focus(0)"></div>
+                    <div errortip mytips="mytips" mystatus="mystatus"></div>
                 </div>
                 <div class="form-group form-input">
                     <div class="left-filed"><label>手机号</label></div>
                     <div class="right-input">
-                        <input type="text" name="user-name" class="normal-input" ng-model="mobile" ng-focus="focus(0)"></div>
-                    <div errortip mytips="mytips2" mystatus="mystatus1"></div>
+                        <input type="text" name="user-name" class="normal-input" ng-model="mobile" ng-focus="focus(1)"></div>
+                    <div errortip mytips="mytips1" mystatus="mystatus1"></div>
                 </div>
                 <div class="form-group form-input">
                     <div class="left-filed"><label>登录密码</label></div>
                     <div class="right-input">
-                        <input type="text" name="user-name" class="normal-input" ng-model="pwd" ng-focus="focus(0)"></div>
-                    <div errortip mytips="mytips3" mystatus="mystatus2"></div>
+                        <input type="password" id="userPassword" pw-check="userPassword" name="user-name" class="normal-input" ng-model="pwd" ng-focus="focus(2)"></div>
+                    <div errortip mytips="mytips2" mystatus="mystatus2"></div>
                 </div>
                 <div class="form-group form-input">
                     <div class="left-filed"><label>审阅密码</label></div>
                     <div class="right-input">
-                        <input type="text" name="user-name" class="normal-input" ng-model="rpwd" ng-focus="focus(0)"></div>
-                    <div errortip mytips="mytips4" mystatus="mystatus3"></div>
+                        <input type="password" name="user-name" class="normal-input" ng-model="rpwd" ng-focus="focus(3)"></div>
+                    <div errortip mytips="mytips3" mystatus="mystatus3"></div>
                 </div>
                 <div class="form-group">
                     <div class="left-filed"><label>身份证照</label></div>
@@ -64,7 +64,7 @@
                     <div class="left-filed"><label>电子签名</label></div>
                     <div class="right-input">
                         <form class="">
-                            <input type="file">
+                            <input type="file" ng-mouseover="">
                         </form>
                         <div class="select-box">
                             <i></i>
@@ -76,7 +76,7 @@
                 <div class="form-group">
                     <div class="left-filed"><label></label></div>
                     <div class="right-input">
-                        <input type="button" class="normal-btn" value="提交" ng-click="login()">
+                        <input type="button" class="normal-btn" value="提交" ng-click="register()">
                     </div>
                 </div>
             </div>

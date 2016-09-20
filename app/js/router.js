@@ -2,7 +2,9 @@ define('router',[
     'app',
     'ui-router',
     'loginCtrl',
-    'registerCtrl'
+    'registerCtrl',
+    'myDesktopCtrl',
+    'docDetailCtrl'
     ],function (app) {
 
 
@@ -12,7 +14,7 @@ define('router',[
     });
 
     app.config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/index');
+        $urlRouterProvider.otherwise('/login');
         $stateProvider
 
             .state('login',{
@@ -43,56 +45,78 @@ define('router',[
                     },
                 }
             })
-            .state('index',{
-                url:'/index',
+            .state('registerdone',{
+                url:'/registerdone',
                 views:{
                     '':{
                         templateUrl:'pages/index.html'
                     },
-                    'topbar@index':{
-                        templateUrl:'pages/nav.html'
+                    'topbannerView@registerdone':{
+                        templateUrl:'pages/topbanner.html'
                     },
-                    'main@index':{
-                        templateUrl:'pages/welcome.html'
-                    },              
+                    'mainView@registerdone':{
+                        templateUrl:'pages/registerdone.html'
+                    },
                 }
             })
-            .state('index.usermng',{
-                url:'/usermng',
+            .state('desktop',{
+                url:'/desktop',
                 views:{
-                    'main@index':{
-                        templateUrl:'pages/usermng.html',
-                        // controller:function ($scope,$state) {
-                        //     $scope.addUserType=function(argument) {
-                        //         $state.go('index.usermng.addUserType');
-                        //     }
-                        // }
+                    '':{
+                        templateUrl:'pages/index.html'
                     },
-                    'leftBar@index.usermng':{
-                       templateUrl:'pages/leftbar.html'
+                    'topbannerView@desktop':{
+                        templateUrl:'pages/topbanner.html'
                     },
-                    'userMain@index.usermng':{
-                       templateUrl:'pages/userwelcome.html'
+                    'mainView@desktop':{
+                        templateUrl:'pages/desktop/desktop.html'
+                    },
+                    'desktopMenu@desktop':{
+                        templateUrl:'pages/desktop/deskmenu.html'
+                    },
+                    'desktopMain@desktop':{
+                        templateUrl:'pages/desktop/mydesktop.html'
                     },
                 }
             })
-
-
-            .state('index.usermng.hightendusers',{
-                 url:'/hightendusers' ,
-                 views:{
-                    'userMain@index.usermng':{
-                        templateUrl:'pages/hightendusers.html'
+            .state('desktop.my',{
+                url:'/my' ,
+                views:{
+                    'desktopMain@desktop':{
+                        templateUrl:'pages/desktop/mydesktop.html'
                     }
                 }
             })
-            .state('index.usermng.normalusers',{
-                 url:'/normalusers' ,
+
+            .state('desktop.achieves',{
+                 url:'/achieves' ,
                  views:{
-                    'userMain@index.usermng':{
-                        templateUrl:'pages/normalusers.html'
+                    'desktopMain@desktop':{
+                        templateUrl:'pages/desktop/achieves.html'
                     }
-                } 
+                }
+            })
+            .state('desktop.templet',{
+                url:'/templet' ,
+                views:{
+                    'desktopMain@desktop':{
+                        templateUrl:'pages/desktop/templet.html'
+                    }
+                }
+            })
+            .state('docdetail',{
+                url:'/docdetail/{docid:.*}' ,//参数传递
+                views:{
+                    '':{
+                        templateUrl:'pages/index.html'
+                    },
+                    'topbannerView@docdetail':{
+                        templateUrl:'pages/topbanner.html'
+                    },
+                    'mainView@docdetail':{
+                        templateUrl:'pages/docdetailinfo.html'
+                    },
+                }
             })
             .state('index.usermng.slowusers',{
                  url:'/slowusers' ,
@@ -100,7 +124,7 @@ define('router',[
                     'userMain@index.usermng':{
                         templateUrl:'pages/slowusers.html'
                     }
-                } 
+                }
             })
             .state('index.settings',{
                 url:'/settings',

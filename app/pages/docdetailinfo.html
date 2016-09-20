@@ -1,0 +1,17 @@
+<div class="doc-detail-wrapper item-wrapper" ng-controller="docDetailCtrl">
+    <div class="doc-detial-left">
+        <div class="basic-info-item">
+            <div class="info-item-head">摘要</div>
+            <div class="info-item-content">
+                <ul>
+                    <li ng-repeat="item in basicInfo">
+                        <div class="field">{{item.name}}</div>
+                        <div class="val" ng-class="{true:'name',false:''}[item.name=='发送人']">{{item.val}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="doc-detial-right">文档{{id}}详情</div>
+
+</div>
