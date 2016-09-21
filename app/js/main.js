@@ -8,9 +8,11 @@ requirejs.config({
         angular:'libs/angular.min',
         'ui-router':'libs/angular-ui-router',
         domReady: 'libs/domReady',
+        datepicker:'libs/datepicker/datepicker',
 
         app:'app',
         router:'router',
+
 
         errortip:'directives/errortip',
         footer:'directives/footer',

@@ -114,7 +114,7 @@ define('router',[
                         templateUrl:'pages/topbanner.html'
                     },
                     'mainView@docdetail':{
-                        templateUrl:'pages/docdetailinfo.html'
+                        templateUrl:'pages/process/docdetailinfo.html'
                     },
                 }
             })

@@ -1,3 +1,6 @@
+.c {
+  cursor: pointer;
+}
 * {
   /*禁用手机浏览器的用户选择功能 */
   -moz-user-select: none;
@@ -493,7 +496,7 @@ body .normal-btn:hover {
 }
 .doc-detail-wrapper .doc-detial-left {
   position: absolute;
-  width: 250px;
+  width: 260px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -501,7 +504,7 @@ body .normal-btn:hover {
   padding: 0 10px;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-head {
   height: 25px;
@@ -515,8 +518,7 @@ body .normal-btn:hover {
   margin-top: 10px;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content li {
-  height: 25px;
-  margin-bottom: 5px;
+  margin: 15px 0;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content li > div {
   display: inline-block;
@@ -537,7 +539,164 @@ body .normal-btn:hover {
 .doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content li .val.name {
   color: #3667a6;
 }
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result {
+  margin: 20px 0px;
+  font-size: 12px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result i {
+  display: inline-block;
+  width: 14px;
+  height: 18px;
+  vertical-align: -5px;
+  margin-right: 6px;
+  background: url(../imgs/sprite.png) 0 0 no-repeat;
+  background-position: -273px -68px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result i.ok {
+  background-position: -273px -41px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result span {
+  color: #a09e9e;
+  line-height: 21px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result span.green {
+  color: #55C46C;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result span.red {
+  color: #CC6666;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result .recheck {
+  color: #2866B5;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item .info-item-content .prev-result .recheck:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content span {
+  display: block;
+  margin: 40px 0;
+  font-size: 12px;
+  color: #a09e9e;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content .choose-btns {
+  height: 40px;
+  margin-top: 20px;
+  position: relative;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content .choose-btns .choose-btn {
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+  background-color: #CC6666;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content .choose-btns .choose-btn.choose-btn-ok {
+  background-color: #6692CC;
+  margin-right: -4px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content .choose-btns .choose-btn:hover {
+  opacity: 1;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.start-process .info-item-content .choose-btns .choose-btn-or {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -20px;
+  background-color: #fff;
+  color: #BFBFBF;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items {
+  margin-top: 30px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items .check-items-header {
+  color: #666;
+  font-size: 14px;
+  margin: 15px 0;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items .check-items-header::before {
+  content: '';
+  margin-right: 10px;
+  font-size: 10px;
+  display: inline-block;
+  vertical-align: 1px;
+  width: 6px;
+  height: 6px;
+  background-color: #666 ;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items .check-item-input {
+  margin: 20px 18px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items .check-item-input .check-option-val {
+  padding: 5px 10px;
+  width: 96%;
+  height: 125px;
+  color: #494949;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items .check-item-input input {
+  display: block;
+  width: 235px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items.check-items-next {
+  text-align: right;
+  margin-right: 4px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-options .check-items.check-items-next .normal-btn {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li {
+  margin: 20px auto;
+  border: 1px dashed #000;
+  width: 200px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li img {
+  max-width: 100%;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li span {
+  color: #a09e9e;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:nth-child(2) {
+  line-height: 80px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:last-child {
+  border: none;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:last-child textarea {
+  border: 1px dashed #000;
+  width: 200px;
+  height: 80px;
+  padding: 2px;
+}
 .doc-detail-wrapper .doc-detial-right {
-  margin-left: 270px;
+  margin-left: 280px;
   padding: 0 25px;
+}
+.doc-detail-wrapper .doc-detial-right .doc-box {
+  width: 80%;
+  min-height: 600px;
+  margin: 0 auto;
+}
+.doc-detail-wrapper .doc-detial-right .doc-box img {
+  max-width: 100%;
 }

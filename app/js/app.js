@@ -1,7 +1,8 @@
  define([
  	'angular',
- 	'ui-router'
+ 	'ui-router',
+	 'datepicker'
  	],function (ng) {
  		'use strict';
- 		return ng.module('app',['ui.router']);
+ 		return ng.module('app',['ui.router','datePicker']);
  	});

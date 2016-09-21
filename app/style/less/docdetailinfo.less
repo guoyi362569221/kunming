@@ -2,7 +2,7 @@
   position: relative;
   height: 100%;
   margin: 0 120px;
-  @w:250px;
+  @w:260px;
   .doc-detial-left{
     position: absolute;
     width: @w;
@@ -12,7 +12,7 @@
     border-right: 1px solid #A4A4A4;
     padding: 0 10px;
     .basic-info-item{
-      margin-bottom: 20px;
+      margin-bottom: 35px;
       .info-item-head{
         height: 25px;
         color: #333333;
@@ -24,8 +24,7 @@
       .info-item-content{
         margin-top: 10px;
         li{
-          height: 25px;
-          margin-bottom: 5px;
+          margin: 15px 0;
           >div{
             display: inline-block;
             vertical-align: top;
@@ -46,11 +45,176 @@
             }
           }
         }
+        .prev-result {
+          margin: 20px 0px;
+          font-size: 12px;
+          i{
+            display: inline-block;
+            .size(14px,18px);
+            vertical-align: -5px;
+            margin-right: 6px;
+            .bg-sprite;
+            background-position: -273px -68px;
+            &.ok{
+              background-position: -273px -41px;
+            }
+          }
+          span{
+            color:@grayColor;
+            line-height: 21px;
+            &.green{
+              color:#55C46C;
+            }
+            &.red{
+              color:#CC6666;
+            }
+          }
+          .recheck {
+            color: #2866B5;
+            &:hover{
+              text-decoration: underline;
+              .c;
+            }
+          }
+        }
       }
+      //开始审批   //步骤1
+      &.start-process{
+        .info-item-content{
+          span{
+            display: block;
+            margin: 40px 0;
+            font-size: 12px;
+            color: @grayColor;
+          }
+          .choose-btns{
+            height: 40px;
+            margin-top: 20px;
+            position: relative;
+            .choose-btn{
+              .size(45%,100%);
+              display: inline-block;
+              background-color: #CC6666;
+              color: #fff;
+              text-align: center;
+              line-height: 40px;
+              opacity: 0.8;
+              .c;
+              .radius(3px);
+              &.choose-btn-ok{
+                background-color: #6692CC;
+                margin-right: -4px;
+              }
+              &:hover{
+                opacity: 1;
+              }
+            }
+            .choose-btn-or{
+              position: absolute;
+              @ww:16px;
+              .size(@ww,@ww);
+              top:50%;
+              left: 50%;
+              margin-top: -@ww / 2;
+              margin-left: -20px;
+              background-color:#fff;
+              color: #BFBFBF;
+              text-align: center;
+              font-size: 12px;
+              .radius(@ww/2);
+            }
+          }
+        }
+      }
+
+      //审核意见   //步骤2
+      &.check-options{
+        .check-items{
+          margin-top: 30px;
+          .check-items-header{
+            color:#666;
+            font-size: 14px;
+            margin: 15px 0;
+            &::before{
+              content: '';
+              margin-right: 10px;
+              font-size: 10px;
+              display: inline-block;
+              vertical-align: 1px;
+              .size(6px,6px);
+              background-color:#666 ;
+              .radius(3px);
+            }
+          }
+          .check-item-input {
+            margin: 20px 18px;
+            .check-option-val {
+              padding: 5px 10px;
+              .size(96%,125px);
+              color: #494949;
+            }
+            input{
+               display: block;
+               width: 235px;
+             }
+          }
+
+          &.check-items-next {
+             text-align: right;
+             margin-right: 4px;
+             .normal-btn{
+               display: inline-block;
+               .size(100px,34px);
+               line-height: 34px;
+               text-align: center;
+             }
+           }
+        }
+        //步骤3/*
+      }
+
+      //放置签名
+      &.check-sign{
+        .sing-box{
+          li{
+            margin: 20px auto;
+            border: 1px dashed #000;
+            .size(200px,80px);
+            background-color: #fff;
+            text-align: center;
+            img{
+              max-width: 100%;
+            }
+            span{
+              color: @grayColor;
+            }
+            &:nth-child(2){
+              line-height: 80px;
+            }
+            &:last-child {
+              border: none;
+              textarea {
+                border: 1px dashed #000;
+                .size(200px, 80px);
+                padding: 2px;
+              }
+            }
+          }
+        }
+      }
+
     }
   }
   .doc-detial-right{
     margin-left: @w + 20;
     padding: 0 25px;
+    .doc-box{
+      width: 80%;
+      min-height: 600px;
+      margin: 0 auto;
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }
