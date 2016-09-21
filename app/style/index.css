@@ -662,7 +662,12 @@ body .normal-btn:hover {
   line-height: 34px;
   text-align: center;
 }
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
 .doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li {
+  position: relative;
   margin: 20px auto;
   border: 1px dashed #000;
   width: 200px;
@@ -676,17 +681,52 @@ body .normal-btn:hover {
 .doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li span {
   color: #a09e9e;
 }
-.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:nth-child(2) {
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li .main-info {
+  width: 100%;
+  height: 100%;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:first-child .main-info {
+  width: 200px;
+  height: 81px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:nth-child(2) .main-info {
   line-height: 80px;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:last-child {
-  border: none;
+  border: 1px dashed #000;
 }
 .doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li:last-child textarea {
-  border: 1px dashed #000;
-  width: 200px;
-  height: 80px;
+  width: 194px;
+  height: 74px;
   padding: 2px;
+  border: none;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li .sing-finish {
+  color: #212121;
+  line-height: 80px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li .reset-sing-info {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #3667a6;
+  font-size: 12px;
+  cursor: pointer;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .sing-box li .reset-sing-info:hover {
+  text-decoration: underline;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .check-items-next {
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 4px;
+}
+.doc-detail-wrapper .doc-detial-left .basic-info-item.check-sign .check-items-next .normal-btn {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
 }
 .doc-detail-wrapper .doc-detial-right {
   margin-left: 280px;
@@ -699,4 +739,84 @@ body .normal-btn:hover {
 }
 .doc-detail-wrapper .doc-detial-right .doc-box img {
   max-width: 100%;
+}
+.conform-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.conform-box .conform-main {
+  width: 530px;
+  height: 340px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -265px;
+  box-shadow: 0 0 2px #212121;
+  background-color: #ECF2F7;
+}
+.conform-box .conform-main .conform-main-header {
+  height: 45px;
+  line-height: 45px;
+  background-color: #FFFFFF;
+  box-shadow: 10px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.conform-box .conform-main .conform-main-header span {
+  display: inline-block;
+  width: 48%;
+}
+.conform-box .conform-main .conform-main-header span:first-child {
+  margin-right: -15px;
+  font-size: 15px;
+  color: #a09e9e;
+  padding-left: 15px;
+}
+.conform-box .conform-main .conform-main-header span:last-child {
+  font-size: 26px;
+  color: #a09e9e;
+  text-align: right;
+  cursor: pointer;
+}
+.conform-box .conform-main .conform-main-header span:last-child:hover {
+  color: #000;
+}
+.conform-box .conform-main .conform-main-content {
+  width: 80%;
+  margin: 70px auto;
+}
+.conform-box .conform-main .conform-main-content .tips {
+  margin: 30px auto;
+  height: 35px;
+  line-height: 35px;
+  width: 70%;
+  background-color: #AFBCE0;
+  color: #4C60BF;
+  text-align: center;
+  border-radius: 3px;
+  background-clip: padding-box;
+  font-size: 14px;
+}
+.conform-box .conform-main .conform-main-content .input-box {
+  margin: 50px 0;
+  text-align: center;
+}
+.conform-box .conform-main .conform-main-content .input-box > * {
+  display: inline-block;
+}
+.conform-box .conform-main .conform-main-content .input-box input {
+  width: 260px;
+  margin-right: -10px;
+}
+.conform-box .conform-main .conform-main-content .input-box .normal-btn {
+  width: 90px;
+  height: 32px;
+  text-align: center;
+}
+.conform-box .conform-main .finishCheck {
+  text-align: center;
+  color: #3667a6;
 }

@@ -38,24 +38,106 @@ define(['app'],function(app){
         }
         $scope.nowTime = $filter("date")(new Date(), "yyyy-MM-dd");
 
+        var drag_=false
+        var D=new Function('obj','return document.getElementById(obj);')
+        var oevent=new Function('e','if (!e) e = window.event;return e');
 
+        var pos=[{
+            x:null,
+            y:null
+        },{
+            x:null,
+            y:null
+        },{
+            x:null,
+            y:null
+        }];
 
+        var totalNum=0;
 
+        $scope.move_obj=function(obj){
+            var x,y;
+            D(obj).onmousedown=function(e){
+                drag_=true;
+                var i=0;
+
+                if(obj=='sing-name'){
+                    i=0;
+                }
+                if(obj=='sing-time'){
+                    i=1;
+                }
+                else if(obj=='sing-option'){
+                    i=2;
+                }
+
+                var tempPos=pos[i];
+                if(!tempPos.x){
+                    tempPos.x= oevent(e).clientX;
+                    tempPos.y= oevent(e).clientY;
+                }
+
+                with(this){
+                    style.position="absolute";var temp1=offsetLeft;var temp2=offsetTop;
+                    style.curson='pointer';
+                    x=oevent(e).clientX;y=oevent(e).clientY;
+                    document.onmousemove=function(e){
+                        if(!drag_)return false;
+                        with(this){
+                            style.left=temp1+oevent(e).clientX-x-142+"px";
+                            style.top=temp2+oevent(e).clientY-y+"px";
+                        }
+                    }
+                }
+                document.onmouseup=function(){
+                    drag_=false;
+                    if(obj=='sing-name'){
+                        $scope.singNameFinish=true;
+                        totalNum++;
+                    }
+                    if(obj=='sing-time'){
+                        $scope.singTimeFinish=true;
+                        totalNum++;
+                    }
+                    else if(obj=='sing-option'){
+                        $scope.singOptionsFinish=true;
+                        totalNum++;
+                    }
+                    if(totalNum==3){
+                        $scope.totalCount=3;
+                    }
+                }
+            }
+        }
+
+        $scope.resetSingInfo=function(index,id){
+            var tempPos=pos[index],
+                target=document.getElementById(id);
+            target.style.left=tempPos.x+"px";;
+            target.style.top=tempPos.y+"px";;
+            if(index==0){
+                $scope.singNameFinish=false;
+            }
+            if(index==0){
+                $scope.singTimeFinish=false;
+            }
+            else{
+                $scope.singOptionsFinish=false;
+            }
+        }
+
+        $scope.checkLast=function(){
+            $scope.conformBoxStatus=true;
+        }
+
+        $scope.hideConformBox=function(index){
+            if(index==0) {
+                $scope.conformBoxStatus = false;
+            }else{
+                $scope.finishlastCheck=true;
+            }
+        };
 
     }]);
 });
 
-
-function allowDrop(ev){
-    ev.preventDefault();
-}
-
-function drag(ev){
-    ev.dataTransfer.setData("Text",ev.target.id);
-}
-
-function drop(ev){
-    ev.preventDefault();
-    var data=ev.dataTransfer.getData("Text");
-    ev.target.appendChild(document.getElementById(data));
-}

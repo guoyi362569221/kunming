@@ -66,25 +66,60 @@
                     <span class="recheck" ng-click="recheck(2)">点击返回上一步修改</span>
                 </div>
                 <ul class="sing-box">
-                    <li draggable="true" ondragstart="drag(event)">
-                        <img id="drag-name" src="../app/imgs/singname.png"/>
+                    <li>
+                        <div class="main-info" id="sing-name" ng-mouseover='move_obj("sing-name")'>
+                            <img src="../app/imgs/singname.png"/>
+                        </div>
+                        <div ng-show="singNameFinish" class="sing-finish">签名放置完成</div>
+                        <div ng-show="singNameFinish" class="reset-sing-info" ng-click="resetSingInfo(0,'sing-name')">重新放置</div>
                     </li>
                     <li>
-                        <span>{{nowTime}}</span>
+                        <div class="main-info" id="sing-time" ng-mouseover='move_obj("sing-time")'>
+                            <span>{{nowTime}}</span>
+                        </div>
+                        <div ng-show="singTimeFinish" class="sing-finish">时间放置完成</div>
+                        <div ng-show="singTimeFinish" class="reset-sing-info" ng-click="resetSingInfo(1,'sing-time')">重新放置</div>
                     </li>
                     <li>
-                        <textarea>{{originOption}}</textarea>
+                        <div class="main-info" id="sing-option" ng-mouseover='move_obj("sing-option")'>
+                            <textarea>{{originOption}}</textarea>
+                        </div>
+                        <div ng-show="singOptionsFinish" class="sing-finish">意见放置完成</div>
+                        <div ng-show="singOptionsFinish" class="reset-sing-info" ng-click="resetSingInfo(2,'sing-option')">重新放置</div>
                     </li>
                 </ul>
+                <div class="check-items check-items-next" ng-show="totalCount==3">
+                    <div class="normal-btn" ng-click="checkLast()">提交审阅</div>
+                </div>
         </div>
-
     </div>
     </div>
     <!--内容-->
     <div class="doc-detial-right">
-        <div class="doc-box" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <!--<img src="../app/imgs/doc.png">-->
+        <div class="doc-box">
+            <img src="../app/imgs/doc.png">
         </div>
     </div>
 
+    <div class="conform-box" ng-show="conformBoxStatus">
+        <div class="conform-main">
+            <div class="conform-main-header">
+                <span>
+                    最后确认
+                </span>
+                 <span ng-click="hideConformBox(0)">
+                   ×
+                </span>
+            </div>
+            <div class="conform-main-content">
+                <div class="tips">为了保证文件安全，请输入您的审阅密码</div>
+                <div class="input-box">
+                    <input type="password" class="normal-input">
+                    <div class="normal-btn" ng-click="hideConformBox()">确认通过</div>
+                </div>
+                <div class="finishCheck" ng-show="finishlastCheck">审核完成</div>
+            </div>
+
+        </div>
+    </div>
 </div>
