@@ -1,0 +1,127 @@
+.c {
+  cursor: pointer;
+}
+* {
+  /*禁用手机浏览器的用户选择功能 */
+  -moz-user-select: none;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+a,
+a:hover,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  word-break: break-all;
+}
+a:focus {
+  outline: none;
+  -moz-outline: none;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border: 1px solid #3667a6;
+}
+.font-icon {
+  display: inline-block;
+}
+.txt-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+body .root-view {
+  height: 100%;
+}
+body .main-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -65px;
+}
+body .main-view .item-wrapper {
+  position: relative;
+  flex: 1;
+  margin-top: 120px;
+}
+body .common-error-tips {
+  position: absolute;
+  right: -245px;
+  top: 0;
+}
+body .common-error-tips > div {
+  margin-left: 30px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  width: 215px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #191a19;
+  border-radius: 2px;
+  background-clip: padding-box;
+  position: relative;
+}
+body .common-error-tips > div::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -14px;
+  top: 4px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 22px solid #191a19;
+}
+body .normal-input {
+  height: 28px;
+  border: 1px solid #d9d9d9;
+  background-color: #f6f6f6;
+  text-indent: 8px;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+body .normal-input:focus {
+  border-color: #3667a6;
+}
+body .normal-btn {
+  background-color: #3667a6;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  background-clip: padding-box;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 30px;
+  height: 38px;
+}
+body .normal-btn:hover {
+  background-color: #19539e;
+}
