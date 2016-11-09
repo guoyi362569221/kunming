@@ -82,8 +82,8 @@ define(['app'],function(app){
         };
 
         $scope.configstyle={
-            top:'139px',
-            left:'100px'
+            top:'290px',
+            left:'28px'
         };
 
         function getIndex(){
