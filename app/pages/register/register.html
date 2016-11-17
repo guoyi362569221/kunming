@@ -1,6 +1,6 @@
 <div class="register-all-wrapper item-wrapper" ng-controller="registerCtrl">
     <!--用户协议-->
-    <div class="register-item-box agreement-wrapper">
+    <div class="register-item-box agreement-wrapper" ng-show="!sureAgreed">
         <div class="register-header">
             <div class="register-title">
                 <span>请完整阅读以下协议</span>
@@ -107,17 +107,25 @@
 
             <p>8.3 本协议解释权及修订权归深圳永兴元科技有限公司所有。</p>
         </div>
+        <div class="agreement-footer">
+            <div class="left-footer">
+                <label>
+                    <input type="checkbox" value="checked" name="check" ng-click="doAgree()">我已完整阅读本协议，接受协议相关规定</label>
+                <!--<input name="checkbox" type="checkbox" value="checkbox" checked="checked" />-->
+            </div>
+            <div class="right-footer"><input type="button" class="normal-btn" ng-click="doSureAgreed()" ng-class="{disabled:!isAgreed}" value="继续"></div>
+        </div>
     </div>
 
     <!--form-->
-    <div class="register-wrapper register-item-box" ng-show="isAgreed">
+    <div class="register-wrapper register-item-box" ng-show="sureAgreed">
             <div class="register-header">
                 <div class="register-title">
                     <i></i>
                     <span>请填写注册信息</span>
                 </div>
                 <div class="back-to-preview">
-                    <a href="javascript:history.back(-1)">返回</a>
+                    <a ng-click="doSureAgreed()">返回</a>
                 </div>
             </div>
             <div class="register-tips">

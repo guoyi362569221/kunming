@@ -7,6 +7,7 @@
     >div{
       display: inline-block;
       a{
+        cursor: pointer;
         font-size: 14px;
         color:@grayColor;
         &:hover{
@@ -52,8 +53,8 @@
       color: #E93F37;
     }
     .content-main{
-      width: 80%;
-      margin: 0 auto;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #D0D0D0;
       h4 {
         margin: 20px 0 10px;
         padding: 0;
@@ -77,6 +78,28 @@
         color: #cccccc;
         height: 4px;
         padding: 0;
+      }
+    }
+    .agreement-footer{
+      margin: 40px 0;
+      display:-webkit-box;
+      >div {
+        -webkit-box-flex: 1;
+        width: 1%;
+        &.left-footer {
+          color: #3667a6;
+          input{
+            margin-right: 20px;
+            .size(14px,14px);
+          }
+        }
+        &.right-footer {
+          text-align: right;
+          .normal-btn{
+            width: 80px;
+            height: 32px;
+          }
+        }
       }
     }
   }

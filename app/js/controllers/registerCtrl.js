@@ -11,6 +11,7 @@ define([
     app.controller('registerCtrl', ['$scope','registerService',function($scope,service) {
 
             $scope.isAgreed=false;
+            $scope.sureAgreed=false;
             $scope.validInfo=[
                 {
                     tips:'',
@@ -61,6 +62,14 @@ define([
                 $scope.validInfo[2].tips=result2.tips;
             }
         };
+
+            $scope.doAgree=function(){
+                $scope.isAgreed=!$scope.isAgreed;
+            };
+
+            $scope.doSureAgreed=function(){
+                $scope.sureAgreed=!$scope.sureAgreed;
+            };
 
     	}
     ]);
